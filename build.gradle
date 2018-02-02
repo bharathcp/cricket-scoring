@@ -1,0 +1,81 @@
+plugins {
+    id 'java'  
+    id "com.eriwen.gradle.js" version "2.14.1"
+    id "com.eriwen.gradle.css" version "2.14.0"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'org.concordion:concordion:2.1.0',
+                'org.concordion:concordion-screenshot-extension:1.2.0',
+                'org.seleniumhq.selenium:selenium-java:3.+',
+                'io.github.bonigarcia:webdrivermanager:1.7.1'
+}
+
+// Declare your sources
+javascript.source {
+    prod {
+        js {
+            srcDir 'web/js'
+            include "*.js"
+        }
+    }
+}
+
+task jshintjs(type: com.eriwen.gradle.js.tasks.JsHintTask) {
+    source = javascript.source.prod.js.files
+    dest = file("${buildDir}/js/hint/jshint.xml")
+    reporter = 'checkstyle'
+    jshint.options = [expr: "true", unused: "false"]
+}
+
+
+task jsdocjs(type: com.eriwen.gradle.js.tasks.JsDocTask) {
+    source = javascript.source.prod.js.files
+    destinationDir = "${buildDir}/js/doc"
+}
+
+css.source {
+    prod {
+        css {
+            srcDir "web/styles"
+            include "*.css"
+        }
+    }
+}
+
+csslint {
+    source = css.source.prod.css.files
+    dest = "${buildDir}/css/lint/csslint.xml"
+    format = 'checkstyle-xml'
+}
+
+sourceSets {
+    test {
+        java {
+            srcDir 'spec'
+        }
+        resources {
+            srcDir 'spec'
+        }
+    }
+    main {
+        resources {
+            srcDir 'web'
+        }
+    }
+}
+
+test {
+    systemProperties['concordion.output.dir'] = "$reporting.baseDir/spec"
+    include 'CricketSpec.*'   
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.0'
+}
+
+test.dependsOn cleanTest

@@ -1,0 +1,200 @@
+body{
+	margin		:50px;
+}
+#frame
+{
+	position	:absolute;
+	left		:50px;
+	top		:50px;
+	height		:398px;
+	width		:500px;
+	background	:url('../images/board.png');
+}
+#window
+{
+	padding	:5px;
+	height		:50px;
+	width		:182px;
+	font		:20px verdana;
+	position	:absolute;
+	left		:22px;
+	top		:44px;
+	word-wrap	:break-word;
+}
+#digit
+{
+	text-align	:center;
+	vertical-align	:center;
+	font		:26px Comic Sans Ms;
+}
+
+#key-dot
+{
+	position	:absolute;
+	left		:266px;
+	top		:45px;
+	cursor		:pointer;
+	width		:59px;
+	height		:38px;
+	background	:url('../images/key.png');
+}
+#key-dot:hover
+{
+	color		:red;
+}
+#key1x
+{
+	position	:absolute;
+	left		:88px;
+	top		:94px;
+	cursor		:pointer;
+	width		:59px;
+	height		:38px;
+	background	:url('../images/key.png');
+	
+}
+#key1x:hover
+{
+	color		:red;
+}
+#key2x
+{
+	position	:absolute;
+	left		:154px;
+	top		:94px;
+	cursor		:pointer;
+	width		:59px;
+	height		:38px;
+	background	:url('../images/key.png');
+	
+}
+#key2x:hover
+{
+	color		:red;
+}
+
+#key1
+{
+	position	:absolute;
+	left		:266px;
+	top		:94px;
+	cursor		:pointer;
+	width		:59px;
+	height		:38px;
+	background	:url('../images/key.png');
+	
+}
+#key1:hover
+{
+	color		:red;
+}
+#key2
+{
+	position	:absolute;
+	left		:332px;
+	top		:94px;
+	cursor		:pointer;
+	width		:59px;
+	height		:38px;
+	background	:url('../images/key.png');
+}
+#key2:hover
+{
+	color		:red;
+}
+#key3
+{
+	position	:absolute;
+	left		:398px;
+	top		:94px;
+	cursor		:pointer;
+	width		:59px;
+	height		:38px;
+	background	:url('../images/key.png');
+	
+}
+#key3:hover
+{
+	color		:red;
+}
+
+#key4
+{
+	position	:absolute;
+	left		:266px;
+	top		:143px;
+	cursor		:pointer;
+	width		:59px;
+	height		:38px;
+	background	:url('../images/key.png');
+}
+#key4:hover
+{
+	color		:red;
+}
+#key5
+{
+	position	:absolute;
+	left		:332px;
+	top		:143px;
+	cursor		:pointer;
+	width		:59px;
+	height		:38px;
+	background	:url('../images/key.png');
+	
+}
+#key5:hover
+{
+	color		:red;
+}
+#key6
+{
+	position	:absolute;
+	left		:398px;
+	top		:143px;
+	cursor		:pointer;
+	width		:59px;
+	height		:38px;
+	background	:url('../images/key.png');
+	
+}
+#key6:hover
+{
+	color		:red;
+}
+#backspace
+{
+	position	:absolute;
+	left		:332px;
+	top		:241px;
+	cursor		:pointer;
+	width		:59px;
+	height		:38px;
+	background	:url('../images/key.png');
+	
+}
+#backspace:hover
+{
+	color:		red;
+}
+#total
+{
+	position	:absolute;
+	left		:288px;
+	top		:333px;
+	cursor		:pointer;
+	width		:59px;
+	height		:38px;
+	font		:26px verdana;
+}
+#score
+{
+	position	:absolute;
+	text-align	:right; 
+	left		:380px;
+	top		:333px;
+	cursor		:pointer;
+	width		:70px;
+	height		:38px;
+	font		:26px verdana;
+}
