@@ -18,8 +18,9 @@ function enter(key) {
 */
 function backspace() {
     var previousBall = scorecard.charAt(scorecard.length - 1);
+    if(!isNaN(previousBall))
     score = score - previousBall;
-    scorecard = scorecard.substring(0, scorecard.length);
+    scorecard = scorecard.substring(0, scorecard.length-1);
     document.getElementById('scorecard').innerHTML = scorecard;
     document.getElementById('score').innerHTML = score;
 }
